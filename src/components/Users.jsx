@@ -22,12 +22,9 @@ const Users = () => {
         <>
 
             {
-                [
-                    <p>Ali</p>,
-                    <p>Ruslan</p>,
-                    <p>Sada</p>,
-                    <p>Sabina</p>,
-                ]
+                users.map((user) => {
+                  return  <p>{user.name}</p>
+                })
             }
 
         </>

@@ -22,8 +22,8 @@ const Users = () => {
         <>
 
             {
-                users.map((user) => {
-                  return  <p key={user.id}>{user.name}</p>
+                users.map(({id, name}) => {
+                  return  <p key={id}>{name}</p>
                 })
             }
 

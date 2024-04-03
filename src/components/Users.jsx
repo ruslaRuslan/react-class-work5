@@ -7,21 +7,15 @@ const Users = () => {
     const [users, setUsers] = useState([]) //komponent yarananda render etsin!
 
     useEffect(() => {
-        console.log('component yarandi');
-    }, [])
-
-    useEffect(() => {
-        console.log('users deyisdi ');
-    }, [users])
-
-    useEffect(() => {
         axios.get(url)
             .then(({ data }) => { // destracche
                 setUsers(data);
             })
     }, []) // bos list -> komponent yarananda bu isi gorecek
 
-
+    useEffect(() => {
+        console.log(users);
+    }, [users])
 
     return (
         // Fragment -> (adlanir yani bos teq)

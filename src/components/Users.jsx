@@ -6,6 +6,10 @@ const url = 'https://jsonplaceholder.typicode.com/users'
 const Users = () => {
     const [users, setUsers] = useState([]) //komponent yarananda render etsin!
 
+    useEffect(()=>{
+        console.log('component yarandi');
+    }, [])
+
     useEffect(() => {
         axios.get(url)
         .then(({ data }) => { // destracche

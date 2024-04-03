@@ -22,9 +22,8 @@ const Users = () => {
         <>
 
             {
-                users.map(({id, name}) => {
-                  return  <p key={id}>{name}</p>
-                })
+                users.map(({ id, name }) => <p key={id}>{name}</p>
+                )
             }
 
         </>
